@@ -1,5 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
 .env
-key
-key.pub
+.venv
+env/
+venv/
+ENV/
+
+# SSH Keys
 *.pem
 *.key
+id_rsa*
+*.ppk
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
