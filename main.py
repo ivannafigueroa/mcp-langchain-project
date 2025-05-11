@@ -1,5 +1,6 @@
 import asyncio
 import os
+from pathlib import Path
 
 from dotenv import load_dotenv
 from langchain_core.messages import HumanMessage
@@ -13,9 +14,12 @@ load_dotenv()
 
 llm = ChatOpenAI()
 
+# Get the absolute path to the math server script relative to this file
+math_server_path = str(Path(__file__).parent / "servers" / "math_server.py")
+
 stdio_server_params = StdioServerParameters(
     command="python",
-    args=["/Users/ivfigueroa/Desktop/mcp-server-course/mcp-langchain-adapters/servers/math_server.py"],
+    args=[math_server_path],
 )
 
 async def main():
